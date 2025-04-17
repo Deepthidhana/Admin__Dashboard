@@ -8,7 +8,10 @@ export default defineConfig({
   test: {
     globals: true,
     environment: "jsdom",
-    setupFiles: ["./setupTests.ts"],
+    setupFiles: ["./vitest.setup.ts"],
+    css: true,
+    testTimeout:1000,
+    reporters:["verbose"],
     // testMatch: ["./tests/**/*.test.tsx"],
     coverage:{
       thresholds:{
