@@ -32,6 +32,14 @@ export const routes = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
+        path: "/",
+        element: (
+          <Suspense fallback={<ErrorPage />}>
+            <Dashboard />
+          </Suspense>
+        ),
+      },
+      {
         path: "/teams",
         element: (
           <Suspense fallback={<ErrorPage />}>

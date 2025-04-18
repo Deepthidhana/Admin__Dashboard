@@ -1,3 +1,5 @@
+import { ContactProps } from "./types"
+
 export const mockDataTeams = [
     {
         id:1,
@@ -90,7 +92,7 @@ export const mockDataTeams = [
 
 ]
 
-export const MockDataContacts = [
+export const MockDataContacts : ContactProps[] = [
     {
         id:1,
         name:"John Doe",

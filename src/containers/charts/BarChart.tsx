@@ -36,8 +36,8 @@ const BarChart = () => {
           xAxis={[{
             data: BarChart_XLabels,
             scaleType:"band",
-            categoryGapRatio: 0.4,
-            barGapRatio:0.7,
+            // categoryGapRatio: 0.4,
+            // barGapRatio:0.7,
             // tickPlacement:"start"
             }]}
         />

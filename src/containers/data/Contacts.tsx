@@ -1,21 +1,25 @@
 import { Box } from "@mui/material";
 import { Header } from "../../common/Header";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { MockDataContacts } from "../../utils/data/mockData";
+import { ContactProps } from "../../utils/data/types";
+
 
 const Contacts = () => {
-  const columns = [
+ 
+  const columns: GridColDef<ContactProps>[] = [
     {
       field: "id",
       headerName: "ID",
-      textAlign: "left",
+      type:"string",
+      align: "left",
     },
-    { field: "name", headerName: "Name", textAlign: "left" },
-    { field: "email", headerName: "Email", textAlign: "left", flex: 1 },
+    { field: "name", headerName: "Name", align: "left" },
+    { field: "email", headerName: "Email", align: "left", flex: 1 },
     {
       field: "phone",
       headerName: "Contact",
-      textAlign: "left",
+      align: "left",
       flex: 1,
     },
     {

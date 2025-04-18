@@ -1,24 +1,19 @@
-import { Home, Menu } from "@mui/icons-material";
-import {
-  Avatar,
-  Box,
-  Drawer,
-  IconButton,
-  List,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  Typography,
-} from "@mui/material";
+import { Menu } from "@mui/icons-material";
+import { Avatar, Box, Drawer, IconButton, Typography } from "@mui/material";
 import { ReactElement, useState } from "react";
-import { charts, dashboard, data, pages } from "../../utils/data/sidebarConstants";
+import {
+  charts,
+  dashboard,
+  data,
+  pages,
+} from "../../utils/data/sidebarConstants";
 import MenuList from "./MenuList";
 
 const Sidebar = (): ReactElement => {
   const [open, setOpen] = useState<boolean>(true);
   return (
     <>
-      <Box display={"flex"}  ml={4} width={open ? "260px" : "50px"}>
+      <Box display={"flex"} ml={4} width={open ? "260px" : "50px"}>
         {/* Admin */}
         <Drawer
           variant="persistent"
@@ -54,9 +49,15 @@ const Sidebar = (): ReactElement => {
             flexDirection={"column"}
           >
             <Avatar
+            
               alt="Deepthi Lokam"
               sx={{ width: 56, height: 56 }}
               src="https://mui.com/static/images/avatar/3.jpg"
+              slotProps={{
+                img:{
+                  loading:"lazy"
+                }
+              }}
             />
             <Typography variant="body2" fontWeight={700}>
               Deepthi Lokam
@@ -77,16 +78,24 @@ const Sidebar = (): ReactElement => {
             </ListItemButton>
           </List> */}
           {/* data */}
-          <MenuList source={data} title="Data"/>
+          <MenuList source={data} title="Data" />
           {/* pages */}
 
-          <MenuList source={pages}  title="Pages"/>
+          <MenuList source={pages} title="Pages" />
 
           {/* chats */}
-          <MenuList source={charts}  title="Charts"/>
+          <MenuList source={charts} title="Charts" />
         </Drawer>
         {!open && (
-          <IconButton onClick={() => setOpen(!open)} sx={{display:"flex", alignItems:"flex-start", marginTop:"20px", height: "fit-content"}}>
+          <IconButton
+            onClick={() => setOpen(!open)}
+            sx={{
+              display: "flex",
+              alignItems: "flex-start",
+              marginTop: "20px",
+              height: "fit-content",
+            }}
+          >
             <Menu />
           </IconButton>
         )}

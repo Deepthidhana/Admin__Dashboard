@@ -1,6 +1,11 @@
 import { Box, Typography } from "@mui/material";
 
-export const Header = ({ title, subtitle }) => {
+interface HeaderProps {
+  title?: string;
+  subtitle: string;
+}
+
+export const Header = ({ title, subtitle }: HeaderProps) => {
   return (
     <Box>
       <Typography variant="subtitle1">{title}</Typography>

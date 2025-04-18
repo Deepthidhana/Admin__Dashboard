@@ -1,6 +1,6 @@
 import { Box, Typography, useTheme } from "@mui/material";
 import { Header } from "../../common/Header";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridRowModel } from "@mui/x-data-grid";
 import { mockDataTeams } from "../../utils/data/mockData";
 import { useMemo } from "react";
 import {
@@ -25,7 +25,7 @@ import { colorTokens } from "../../utils/theme/theme";
         field: "access",
         headerName: "Access",
         flex:1,
-        renderCell: ({ row: { access } }) => (
+        renderCell: ({ row: { access } } : GridRowModel ) => (
            <Box bgcolor={access === "Admin" ? token.greenAccent[600] : token.greenAccent[700]}
            width={"60%"}
            display={"flex"}
