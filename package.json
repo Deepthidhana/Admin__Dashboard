@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "format": "prettier ./src --write",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",
@@ -20,6 +21,7 @@
     "@mui/x-charts": "^7.28.0",
     "@mui/x-data-grid": "^7.28.3",
     "formik": "^2.4.6",
+    "prettier": "^3.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router": "^6.30.0",
