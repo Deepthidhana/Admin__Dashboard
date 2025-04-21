@@ -1,6 +1,6 @@
 import Topbar from "./components/topbar/Topbar";
 import Sidebar from "./components/sidebar/Sidebar";
-import { Box } from "@mui/material";
+import  Box  from "@mui/material/Box";
 import { Outlet } from "react-router-dom";
 
 function App() {

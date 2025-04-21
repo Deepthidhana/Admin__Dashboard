@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import Box  from "@mui/material/Box";
 import { Header } from "../../common/Header";
 import { BarChart as Bar } from "@mui/x-charts";
 import { BarChart_XLabels, mockBarChartData } from "../../utils/data/mockChartData";

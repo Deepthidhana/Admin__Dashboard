@@ -1,5 +1,6 @@
 import { createContext } from "react";
-import { CssBaseline, ThemeProvider as Provider } from "@mui/material";
+import  CssBaseline  from "@mui/material/CssBaseline";
+import {ThemeProvider as Provider} from '@mui/material'
 import { useMode } from "./theme";
 
 
