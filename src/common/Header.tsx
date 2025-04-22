@@ -9,7 +9,7 @@ interface HeaderProps {
 export const Header = ({ title, subtitle }: HeaderProps) => {
   return (
     <Box>
-      <Typography variant="subtitle1">{title}</Typography>
+      <Typography variant="subtitle1" component={"h3"}>{title}</Typography>
       <Typography variant="body2">{subtitle}</Typography>
     </Box>
   );

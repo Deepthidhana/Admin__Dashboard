@@ -10,10 +10,10 @@ import { charts, dashboard, data, pages } from '../../utils/data/sidebarConstant
 import MenuList from './MenuList';
 
 const Sidebar = (): ReactElement => {
-  const [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = useState<boolean>(true);
   return (
     <>
-      <Box display={'flex'} ml={4} width={open ? '260px' : '50px'}>
+      <Box display={'flex'} ml={4} width={open ? '300px' : '50px'}>
         {/* Admin */}
         <Drawer
           variant="persistent"
@@ -30,14 +30,14 @@ const Sidebar = (): ReactElement => {
             <Typography component={'h1'} fontWeight={500}>
               Admin
             </Typography>
-            <IconButton onClick={() => setOpen(false)}>
+            <IconButton onClick={() => setOpen(false)} aria-label="close Menu">
               <Menu />
             </IconButton>
           </Box>
 
           {/* profile */}
           <Box display={'flex'} justifyContent={'center'} alignItems={'center'} flexDirection={'column'}>
-            {/* <Avatar
+            <Avatar
               alt="Deepthi Lokam"
               sx={{ width: 56, height: 56 }}
               src="src\assets\img.jpg"
@@ -46,7 +46,7 @@ const Sidebar = (): ReactElement => {
                   loading: 'lazy',
                 },
               }}
-            /> */}
+            />
             <Typography variant="body2" fontWeight={700}>
               Deepthi Lokam
             </Typography>
